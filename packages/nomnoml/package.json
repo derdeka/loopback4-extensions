@@ -1,6 +1,6 @@
 {
   "name": "@derdeka/loopback4-extension-nomnoml",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "generates uml diagram of models",
   "keywords": [
     "nomnoml",
@@ -50,16 +50,16 @@
   },
   "devDependencies": {
     "@loopback/build": "^2.0.14",
-    "source-map-support": "^0.5.13",
+    "@loopback/eslint-config": "^4.1.2",
     "@loopback/testlab": "^1.9.2",
     "@types/node": "^10.14.20",
-    "@typescript-eslint/parser": "^2.3.3",
     "@typescript-eslint/eslint-plugin": "^2.3.3",
-    "@loopback/eslint-config": "^4.1.2",
+    "@typescript-eslint/parser": "^2.3.3",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-eslint-plugin": "^2.1.0",
     "eslint-plugin-mocha": "^6.1.1",
+    "source-map-support": "^0.5.13",
     "typescript": "~3.6.3"
   }
 }
