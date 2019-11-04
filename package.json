@@ -1,0 +1,19 @@
+{
+  "name": "@derdeka/loopback4-extensions",
+  "private": true,
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "build": "lerna run build --sort",
+    "clean": "lerna clean",
+    "prettier:cli": "lb-prettier \"**/*.ts\" \"**/*.js\" \"**/*.md\"",
+    "prettier:check": "npm run prettier:cli -- -l",
+    "prettier:fix": "npm run prettier:cli -- --write",
+    "eslint": "lb-eslint --cache --report-unused-disable-directives .",
+    "eslint:fix": "npm run eslint -- --fix",
+    "test": "lb-mocha --allow-console-logs \"packages/*/dist/__tests__/**/*.js\""
+  },
+  "devDependencies": {
+    "@loopback/build": "^2.0.14",
+    "lerna": "^3.18.3"
+  }
+}
