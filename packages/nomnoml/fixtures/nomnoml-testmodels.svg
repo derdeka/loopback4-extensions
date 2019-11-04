@@ -1,0 +1,26 @@
+<svg version="1.1" baseProfile="full" width="289" height="205" viewbox="0 0 289 205" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" style="font-weight:bold; font-size:12pt; font-family:'Calibri', Helvetica, sans-serif;;stroke-width:3;stroke-linejoin:round;stroke-linecap:round">
+  <title >nomnoml</title>
+  <desc >[nomnoml] is -&gt; [awesome]
+[ModelA|prop1: String]
+[ModelB|prop1: String;prop2: Number]
+[ModelB] belongsTo -&gt; [ModelA]</desc>
+  <text x="243" y="87.5" style="fill: #33322E;font-weight:normal;">is</text>
+  <path d="M235 67.5 L235 110.5 L235 146 L235 146 " style="stroke:#33322E;fill:none;stroke-dasharray:none;"></path>
+  <path d="M229.7 132.7 L235 139.3 L240.3 132.7 L235 146 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;"></path>
+  <text x="91.5" y="110.5" style="fill: #33322E;font-weight:normal;">belongsTo</text>
+  <path d="M83.5 90.5 L83.5 110.5 L83.5 130.5 L83.5 130.5 " style="stroke:#33322E;fill:none;stroke-dasharray:none;"></path>
+  <path d="M78.2 117.2 L83.5 123.8 L88.8 117.2 L83.5 130.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;"></path>
+  <rect x="13.5" y="130.5" height="62" width="140" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;"></rect>
+  <text x="83.5" y="152" style="fill: #33322E;text-anchor: middle;">ModelA</text>
+  <path d="M13.5 161.5 L153.5 161.5" style="stroke:#33322E;fill:none;stroke-dasharray:none;"></path>
+  <text x="21.5" y="183" style="fill: #33322E;font-weight:normal;">prop1: String</text>
+  <rect x="13.5" y="13.5" height="77" width="140" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;"></rect>
+  <text x="83.5" y="35" style="fill: #33322E;text-anchor: middle;">ModelB</text>
+  <path d="M13.5 44.5 L153.5 44.5" style="stroke:#33322E;fill:none;stroke-dasharray:none;"></path>
+  <text x="21.5" y="66" style="fill: #33322E;font-weight:normal;">prop1: String</text>
+  <text x="21.5" y="81" style="fill: #33322E;font-weight:normal;">prop2: Number</text>
+  <rect x="193.5" y="36.5" height="31" width="83" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;"></rect>
+  <text x="235" y="58" style="fill: #33322E;text-anchor: middle;">nomnoml</text>
+  <rect x="193.5" y="146.5" height="31" width="83" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;"></rect>
+  <text x="235" y="168" style="fill: #33322E;text-anchor: middle;">awesome</text>
+</svg>
