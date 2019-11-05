@@ -1,6 +1,6 @@
 {
   "name": "@derdeka/loopback4-extension-nomnoml",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "generates uml diagram of models",
   "keywords": [
     "nomnoml",
