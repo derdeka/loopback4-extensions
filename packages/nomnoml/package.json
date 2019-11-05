@@ -54,7 +54,7 @@
     "nomnoml": "^0.6.1"
   },
   "devDependencies": {
-    "@loopback/build": "^2.0.14",
+    "@loopback/build": "^2.0.15",
     "@loopback/eslint-config": "^4.1.2",
     "@loopback/testlab": "^1.9.2",
     "@types/node": "^10.14.20",
