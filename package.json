@@ -15,6 +15,6 @@
   },
   "devDependencies": {
     "@loopback/build": "^2.0.15",
-    "lerna": "^3.18.3"
+    "lerna": "^3.19.0"
   }
 }
