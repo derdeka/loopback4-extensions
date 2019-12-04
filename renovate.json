@@ -30,6 +30,12 @@
   "separateMinorPatch": false,
   "packageRules": [
     {
+      "packagePatterns": [
+        "^@loopback/"
+      ],
+      "groupName": "loopback packages"
+    },
+    {
       "packageNames": [
         "@microsoft/api-extractor",
         "@microsoft/api-documenter"
