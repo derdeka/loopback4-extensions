@@ -14,7 +14,7 @@
     "test": "lb-mocha --allow-console-logs \"packages/*/dist/__tests__/**/*.js\""
   },
   "devDependencies": {
-    "@loopback/build": "^2.1.0",
+    "@loopback/build": "^3.0.0",
     "lerna": "^3.19.0"
   }
 }
