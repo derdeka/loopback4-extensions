@@ -1,5 +1,5 @@
-import { bind, BindingScope, Constructor, inject } from '@loopback/core';
-import { get } from '@loopback/rest';
+import { Constructor, inject } from '@loopback/core';
+import { get, Response, RestBindings } from '@loopback/rest';
 // import { renderSvg } from 'nomnoml';
 import { UmlBindings } from '../keys';
 import { DEFAULT_UML_OPTIONS, ModelMetadataService, UmlOptions } from '../types';
@@ -11,21 +11,30 @@ interface Nomnoml {
 const { renderSvg }: Nomnoml = require('nomnoml');
 
 export function createUMLController(options: UmlOptions = DEFAULT_UML_OPTIONS): Constructor<unknown> {
-  @bind({ scope: BindingScope.SINGLETON })
   class UMLController {
     constructor(
+      @inject(RestBindings.Http.RESPONSE)
+      private response: Response,
       @inject(UmlBindings.METADATA_SERVICE)
       private metadataService: ModelMetadataService,
-    ) {}
+    ) { }
 
     @get(options.umlPath, {
-      responses: {},
       'x-visibility': 'undocumented',
+      responses: {
+        200: {
+          description: '',
+          content: { 'image/svg+xml': { schema: { type: 'string' } } },
+        },
+      },
     })
     uml() {
       const nomnomlString = this.metadataService.createNomnomlString();
       const svg = renderSvg(nomnomlString);
-      return svg;
+      this.response
+        .status(200)
+        .contentType('image/svg+xml')
+        .send(svg);
     }
   }
 
