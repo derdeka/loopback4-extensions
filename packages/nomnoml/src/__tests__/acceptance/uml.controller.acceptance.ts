@@ -47,7 +47,7 @@ describe('UmlController (acceptance)', () => {
       const svg = await readFile(`${__dirname}/../../../fixtures/nomnoml-testmodels.svg`, 'utf8');
       const res = await client.get('/uml').expect(200);
       expect(res.header['content-type']).to.equal('image/svg+xml; charset=utf-8');
-      expect(res.text).to.equal(svg);
+      expect(res.body.toString()).to.equal(svg);
     });
   });
 
