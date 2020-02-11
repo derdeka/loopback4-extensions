@@ -10,6 +10,8 @@ describe('UmlController (acceptance)', () => {
   let app: RestApplication;
   let client: Client;
 
+  const removeLastNewline = (input: string) => input.replace(/\n$/, '');
+
   afterEach(async () => {
     if (app) await app.stop();
     (app as unknown) = undefined;
@@ -47,14 +49,14 @@ describe('UmlController (acceptance)', () => {
       const txt = await readFile(`${__dirname}/../../../fixtures/nomnoml-testmodels.txt`, 'utf8');
       const res = await client.get('/uml.txt').expect(200);
       expect(res.header['content-type']).to.equal('text/plain; charset=utf-8');
-      expect(res.body.toString()).to.equal(txt);
+      expect(res.text).to.equal(removeLastNewline(txt));
     });
 
     it('creates svg at "/uml"', async () => {
       const svg = await readFile(`${__dirname}/../../../fixtures/nomnoml-testmodels.svg`, 'utf8');
       const res = await client.get('/uml').expect(200);
       expect(res.header['content-type']).to.equal('image/svg+xml; charset=utf-8');
-      expect(res.body.toString()).to.equal(svg);
+      expect(res.body.toString()).to.equal(removeLastNewline(svg));
     });
   });
 

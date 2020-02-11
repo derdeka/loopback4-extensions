@@ -17,7 +17,7 @@ export function createUMLController(options: UmlOptions = DEFAULT_UML_OPTIONS): 
       private response: Response,
       @inject(UmlBindings.METADATA_SERVICE)
       private metadataService: ModelMetadataService,
-    ) { }
+    ) {}
 
     @get(`${options.umlPath}.txt`, {
       'x-visibility': 'undocumented',
