@@ -19,6 +19,23 @@ export function createUMLController(options: UmlOptions = DEFAULT_UML_OPTIONS): 
       private metadataService: ModelMetadataService,
     ) { }
 
+    @get(`${options.umlPath}.txt`, {
+      'x-visibility': 'undocumented',
+      responses: {
+        200: {
+          description: '',
+          content: { 'text/plain': { schema: { type: 'string' } } },
+        },
+      },
+    })
+    umlTxt() {
+      const nomnomlString = this.metadataService.createNomnomlString();
+      this.response
+        .status(200)
+        .contentType('text/plain')
+        .send(nomnomlString);
+    }
+
     @get(options.umlPath, {
       'x-visibility': 'undocumented',
       responses: {
@@ -28,7 +45,7 @@ export function createUMLController(options: UmlOptions = DEFAULT_UML_OPTIONS): 
         },
       },
     })
-    uml() {
+    umlSvg() {
       const nomnomlString = this.metadataService.createNomnomlString();
       const svg = renderSvg(nomnomlString);
       this.response

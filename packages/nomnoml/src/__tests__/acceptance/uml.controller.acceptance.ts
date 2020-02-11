@@ -43,6 +43,13 @@ describe('UmlController (acceptance)', () => {
       service.inspect(ModelB);
     });
 
+    it('creates text at "/uml.txt"', async () => {
+      const txt = await readFile(`${__dirname}/../../../fixtures/nomnoml-testmodels.txt`, 'utf8');
+      const res = await client.get('/uml.txt').expect(200);
+      expect(res.header['content-type']).to.equal('text/plain; charset=utf-8');
+      expect(res.body.toString()).to.equal(txt);
+    });
+
     it('creates svg at "/uml"', async () => {
       const svg = await readFile(`${__dirname}/../../../fixtures/nomnoml-testmodels.svg`, 'utf8');
       const res = await client.get('/uml').expect(200);

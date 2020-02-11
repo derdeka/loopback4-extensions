@@ -1,0 +1,4 @@
+[nomnoml] is -> [awesome]
+[ModelA|prop1: String]
+[ModelB|prop1: String;prop2: Number]
+[ModelB] belongsTo -> [ModelA]
