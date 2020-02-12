@@ -1,0 +1,70 @@
+{
+  "name": "@derdeka/loopback4-extension-plantuml",
+  "version": "0.0.1",
+  "description": "generates uml diagram of models",
+  "keywords": [
+    "plantuml",
+    "uml",
+    "loopback-extension",
+    "loopback"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.9"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "lb-tsc",
+    "build:watch": "lb-tsc --watch",
+    "clean": "lb-clean dist *.tsbuildinfo",
+    "lint": "npm run prettier:check && npm run eslint",
+    "lint:fix": "npm run eslint:fix && npm run prettier:fix",
+    "prettier:cli": "lb-prettier \"**/*.ts\" \"**/*.js\"",
+    "prettier:check": "npm run prettier:cli -- -l",
+    "prettier:fix": "npm run prettier:cli -- --write",
+    "eslint": "lb-eslint --report-unused-disable-directives .",
+    "eslint:fix": "npm run eslint -- --fix",
+    "pretest": "npm run clean && npm run build",
+    "test": "lb-mocha --allow-console-logs \"dist/__tests__\"",
+    "posttest": "npm run lint",
+    "test:dev": "lb-mocha --allow-console-logs dist/__tests__/**/*.js && npm run posttest",
+    "prepublishOnly": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/derdeka/loopback4-extensions",
+    "directory": "packages/plantuml"
+  },
+  "author": "",
+  "license": "",
+  "files": [
+    "README.md",
+    "index.js",
+    "index.d.ts",
+    "dist",
+    "src",
+    "!*/__tests__"
+  ],
+  "dependencies": {
+    "@loopback/context": "^2.1.1",
+    "@loopback/core": "^1.12.4",
+    "@loopback/rest": "^2.0.0",
+    "node-plantuml": "^0.9.0"
+  },
+  "devDependencies": {
+    "@loopback/build": "^3.1.1",
+    "@loopback/eslint-config": "^5.0.3",
+    "@loopback/testlab": "^1.10.3",
+    "@types/node": "^10.17.14",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-eslint-plugin": "^2.2.1",
+    "eslint-plugin-mocha": "^6.2.2",
+    "source-map-support": "^0.5.16",
+    "typescript": "~3.7.5"
+  }
+}
