@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/derdeka/loopback4-extensions/compare/@derdeka/loopback4-extension-nomnoml@0.0.6...@derdeka/loopback4-extension-nomnoml@0.1.0) (2020-02-12)
+
+
+### Features
+
+* **nomnoml:** add text output ([ec903d0](https://github.com/derdeka/loopback4-extensions/commit/ec903d0e376f303472debfd92c623230a85bdfde))
+* **nomnoml:** add text output ([944c2c4](https://github.com/derdeka/loopback4-extensions/commit/944c2c46f8d620d13003675ac8db0858b4ae0180))
+
+
+
+
+
 ## [0.0.6](https://github.com/derdeka/loopback4-extensions/compare/@derdeka/loopback4-extension-nomnoml@0.0.5...@derdeka/loopback4-extension-nomnoml@0.0.6) (2019-12-10)
 
 
